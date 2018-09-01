@@ -1,7 +1,7 @@
 <%-- 
-    Document   : rh_index
-    Created on : 30/08/2018, 07:30:40 PM
-    Author     : Josafat Rosas Ortiz
+    Document   : CrearNomina
+    Created on : 31/08/2018, 11:24:50 AM
+    Author     : Windows 10 Pro
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>P&aacute;gina&nbsp;principal</title>
+        <title>Crear&nbsp;Nómina</title>
     </head>
     <body>
         <div class="container-fluid">

@@ -1,7 +1,7 @@
 <%-- 
-    Document   : rh_index
-    Created on : 30/08/2018, 07:30:40 PM
-    Author     : Josafat Rosas Ortiz
+    Document   : ContratarEmpleado
+    Created on : 31/08/2018, 01:29:52 PM
+    Author     : Windows 10 Pro
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>P&aacute;gina&nbsp;principal</title>
+        <title>Contratar&nbsp;Empleado</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -57,7 +57,11 @@
                 </div>
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <table>
+                        
+                    </table>
+                </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>
     </body>
