@@ -57,7 +57,29 @@
                 </div>
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <center>
+                        <form method="POST" action="" autocomplete="off">
+                            <table>
+                                <tr>
+                                    <td>
+                                        N&uacute;mero&nbsp;de&nbsp;n&oacute;mina
+                                    </td>
+                                    <td>
+                                        <input type="text" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <center>
+                                            <input type="submit" class="btn btn-success" value="Eliminar"/>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </center>
+                </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>
     </body>

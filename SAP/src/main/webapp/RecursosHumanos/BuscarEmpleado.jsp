@@ -57,7 +57,42 @@
                 </div>
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <center>
+                        <form method="POST" action="" autocomplete="off">
+                            <table>
+                                <tr>
+                                    <td>
+                                        ID&nbsp;del&nbsp;empleado
+                                    </td>
+                                    <td>
+                                        <input type="text" id="buscarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &Aacute;rea
+                                    </td>
+                                    <td>
+                                        <select class="form-control form-control-sm">
+                                            <option value="" selected="selected">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
+                                            <option value="1">Gerencia</option>
+                                            <option value="2">Recursos&nbsp;Humanos</option>
+                                            <option value="3">Inventario</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <center>
+                                            <input type="submit" class="btn btn-success" value="Buscar"/>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </center>
+                </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>
     </body>

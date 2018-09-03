@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ConsultarNomina
-    Created on : 31/08/2018, 01:29:38 PM
+    Document   : ModificarResultado
+    Created on : 2/09/2018, 01:27:05 PM
     Author     : Windows 10 Pro
 --%>
 
@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>Consultar&nbsp;Nómina</title>
+        <title>Modificar&nbsp;Empleado</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -66,13 +66,81 @@
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="text" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <label></label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Nombre
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Primer&nbsp;apellido
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Segundo&nbsp;apellido
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Direcci&oacute;n
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Tel&eacute;fono
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        &Aacute;rea
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Puesto
+                                    </td>
+                                    <td>
+                                        <select class="form-control form-control-sm" required="required">
+                                            <option value="" selected="selected">Selecciona&nbsp;el&nbsp;puesto...</option>
+                                            <option value="Gerente">Gerente</option>
+                                            <option value="Empleado">Empleado</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Actividad
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
                                         <center>
-                                            <input type="submit" class="btn btn-success" value="Buscar"/>
+                                            <input type="submit" class="btn btn-success" value="Aceptar"/>
                                         </center>
                                     </td>
                                 </tr>

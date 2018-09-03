@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ConsultarNomina
-    Created on : 31/08/2018, 01:29:38 PM
+    Document   : BuscarResultado
+    Created on : 2/09/2018, 03:14:32 PM
     Author     : Windows 10 Pro
 --%>
 
@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>Consultar&nbsp;Nómina</title>
+        <title>Modificar&nbsp;Empleado</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -58,27 +58,7 @@
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
-                    <center>
-                        <form method="POST" action="" autocomplete="off">
-                            <table>
-                                <tr>
-                                    <td>
-                                        ID&nbsp;del&nbsp;empleado
-                                    </td>
-                                    <td>
-                                        <input type="text" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <center>
-                                            <input type="submit" class="btn btn-success" value="Buscar"/>
-                                        </center>
-                                    </td>
-                                </tr>
-                            </table>
-                        </form>
-                    </center>
+                    <scroll-container></scroll-container>
                 </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>

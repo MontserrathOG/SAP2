@@ -57,7 +57,37 @@
                 </div>
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <center>
+                        <form method="POST" action="" autocomplete="off">
+                            <table>
+                                <tr>
+                                    <td>
+                                        ID&nbsp;del&nbsp;empleado
+                                    </td>
+                                    <td>
+                                        <input type="text" id="actividadIdEmp" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Actividad
+                                    </td>
+                                    <td>
+                                        <input type="text" id="actividadEmpleado" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <center>
+                                            <input type="submit" value="Registrar" class="btn btn-success"/>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </center>
+                </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>
     </body>
