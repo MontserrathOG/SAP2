@@ -59,14 +59,33 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="" autocomplete="off">
+                        <form method="POST" autocomplete="off" action="" id="formModificarEmp" name="formModificarEmp">
                             <table>
                                 <tr>
-                                    <td>
-                                        ID&nbsp;del&nbsp;empleado
+                                    <td colspan="2">
+                                        Lugar&nbsp;de&nbsp;origen
                                     </td>
                                     <td>
-                                        <label></label>
+                                        <input class="form-check-input" type="radio" name="empleadoModOrigen" id="origenModMexico" checked="checked" value="mexico"/>
+                                        <label for="origenMexico">M&eacute;xico</label>
+                                    </td>
+                                    <td>
+                                        <input class="form-check-input" type="radio" name="empleadoModOrigen" id="origenModExtranjero" value="extranjero"/>
+                                        <label for="origenExtranjero">Extranjero</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CURP
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="curpModificarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        RFC
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="rfcModificarEmp" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +93,21 @@
                                         Nombre
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nombreModificarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        &Aacute;rea
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="areaModificarEmp" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
+                                            <option value="Recursos Humanos">Recursos&nbsp;Humanos</option>
+                                            <option value="Ventas">Ventas</option>
+                                            <option value="Compras">Compras</option>
+                                            <option value="Inventario">Invetario</option>
+                                            <option value="Gerencia">Gerencia</option>
+                                            <option value="Contabilidad">Contabilidad</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -82,7 +115,18 @@
                                         Primer&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="paternoModificarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        Puesto
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="puestoModificarEmp" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;un&nbsp;puesto...</option>
+                                            <option value="Administrador">Administrador</option>
+                                            <option value="Empleado">Empleado&nbsp;de&nbsp;planta</option>
+                                            <option value="Asistente">Asistente</option>
+                                        </select>
                                     </td>
                                 </tr>
                                 <tr>
@@ -90,7 +134,41 @@
                                         Segundo&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="maternoModificarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        Tel&eacute;fono
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" id="telModificarEmp" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Edad
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" id="edadModificarEmp" disabled="disabled" min="18" max="80" required="required"/>
+                                    </td>
+                                    <td>
+                                        Horario
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="horarioModificarEmp" disabled="disabled" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lugar&nbsp;de&nbsp;nacimiento
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="lugarModificarEmp" disabled="disabled" required="required"/>
+                                    </td>
+                                    <td>
+                                        Actividad
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="activModificarEmp" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -98,50 +176,32 @@
                                         Direcci&oacute;n
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="dirModificarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        Sueldo
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="sueldoModificarEmp" disabled="disabled" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        Tel&eacute;fono
+                                        Nacionalidad
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nacModificarEmp" disabled="disabled" value="Mexicana" required="required"/>
+                                    </td>
+                                    <td>
+                                        Cuenta&nbsp;bancaria
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" id="cuentaModificarEmp" maxlength="10" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        &Aacute;rea
-                                    </td>
-                                    <td>
-                                        <input type="text" class="form-control form-control-sm" required="required"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Puesto
-                                    </td>
-                                    <td>
-                                        <select class="form-control form-control-sm" required="required">
-                                            <option value="" selected="selected">Selecciona&nbsp;el&nbsp;puesto...</option>
-                                            <option value="Gerente">Gerente</option>
-                                            <option value="Empleado">Empleado</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Actividad
-                                    </td>
-                                    <td>
-                                        <input type="text" class="form-control form-control-sm" required="required"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <center>
-                                            <input type="submit" class="btn btn-success" value="Aceptar"/>
-                                        </center>
+                                    <td colspan="4" align="center">
+                                        <input type="submit" value="Registrar" class="btn btn-success"/>
                                     </td>
                                 </tr>
                             </table>

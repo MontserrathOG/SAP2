@@ -58,9 +58,155 @@
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
-                    <table>
-                        
-                    </table>
+                    <center>
+                        <form method="POST" autocomplete="off" action="" id="formContratarEmp" name="formContratarEmp">
+                            <table>
+                                <tr>
+                                    <td colspan="2">
+                                        Lugar&nbsp;de&nbsp;origen
+                                    </td>
+                                    <td>
+                                        <input class="form-check-input" type="radio" name="empleadoOrigen" id="origenMexico" checked="checked" value="mexico"/>
+                                        <label for="origenMexico">M&eacute;xico</label>
+                                    </td>
+                                    <td>
+                                        <input class="form-check-input" type="radio" name="empleadoOrigen" id="origenExtranjero" value="extranjero"/>
+                                        <label for="origenExtranjero">Extranjero</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        CURP
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="curpContratarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        RFC
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="rfcContratarEmp" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Nombre
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="nombreContratarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        &Aacute;rea
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="areaContratarEmp" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
+                                            <option value="Recursos Humanos">Recursos&nbsp;Humanos</option>
+                                            <option value="Ventas">Ventas</option>
+                                            <option value="Compras">Compras</option>
+                                            <option value="Inventario">Invetario</option>
+                                            <option value="Gerencia">Gerencia</option>
+                                            <option value="Contabilidad">Contabilidad</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Primer&nbsp;apellido
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="paternoContratarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        Puesto
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="puestoContratarEmp" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;un&nbsp;puesto...</option>
+                                            <option value="Administrador">Administrador</option>
+                                            <option value="Empleado">Empleado&nbsp;de&nbsp;planta</option>
+                                            <option value="Asistente">Asistente</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Segundo&nbsp;apellido
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="maternoContratarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        Tel&eacute;fono
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" id="telContratarEmp" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Edad
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" id="edadContratarEmp" disabled="disabled" min="18" max="80" required="required"/>
+                                    </td>
+                                    <td>
+                                        Horario
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="horarioContratarEmp" disabled="disabled" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Lugar&nbsp;de&nbsp;nacimiento
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="lugarContratarEmp" disabled="disabled" required="required"/>
+                                    </td>
+                                    <td>
+                                        Actividad
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="activContratarEmp" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Direcci&oacute;n
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="dirContratarEmp" required="required"/>
+                                    </td>
+                                    <td>
+                                        Sueldo
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="sueldoContratarEmp" disabled="disabled" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Nacionalidad
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="nacContratarEmp" disabled="disabled" value="Mexicana" required="required"/>
+                                    </td>
+                                    <td>
+                                        Cuenta&nbsp;bancaria
+                                    </td>
+                                    <td>
+                                        <input type="number" class="form-control form-control-sm" id="cuentaContratarEmp" maxlength="10" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" align="center">
+                                        <input type="submit" value="Registrar" class="btn btn-success"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </center>
                 </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>

@@ -59,7 +59,7 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="" autocomplete="off">
+                        <form method="POST" action="ModificarResultado.jsp" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>

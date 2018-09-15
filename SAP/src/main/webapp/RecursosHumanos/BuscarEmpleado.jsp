@@ -59,7 +59,7 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="" autocomplete="off">
+                        <form method="POST" action="BuscarResultado.jsp" autocomplete="off" id="formBuscarEmp" name="formBuscarEmp">
                             <table>
                                 <tr>
                                     <td>
@@ -76,9 +76,12 @@
                                     <td>
                                         <select class="form-control form-control-sm">
                                             <option value="" selected="selected">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
-                                            <option value="1">Gerencia</option>
-                                            <option value="2">Recursos&nbsp;Humanos</option>
-                                            <option value="3">Inventario</option>
+                                            <option value="Recursos Humanos">Recursos&nbsp;Humanos</option>
+                                            <option value="Ventas">Ventas</option>
+                                            <option value="Compras">Compras</option>
+                                            <option value="Inventario">Invetario</option>
+                                            <option value="Gerencia">Gerencia</option>
+                                            <option value="Contabilidad">Contabilidad</option>
                                         </select>
                                     </td>
                                 </tr>
