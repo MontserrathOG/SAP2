@@ -57,7 +57,142 @@
                 </div>
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
-                <div class="container-fluid"></div>
+                <div class="container-fluid">
+                    <center>
+                        <form method="POST" action="" autocomplete="off">
+                            <table>
+                                <tr>
+                                    <td>
+                                        ID&nbsp;del&nbsp;empleado
+                                    </td>
+                                    <td>
+                                        <input type="number" id="idCrearNomina" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Cantidad
+                                    </td>
+                                    <td>
+                                        <input type="number" id="cantidadCrearNomina" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Banco
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="bancoCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="2">Banamex</option>
+                                            <option value="12">BBVA&nbsp;Bancomer</option>
+                                            <option value="14">Santander</option>
+                                            <option value="21">HSBC</option>
+                                            <option value="32">IXE</option>
+                                            <option value="36">INBURSA</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Estado
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="estadoCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="AGU">Aguascalientes</option>
+                                            <option value="BCN">Baja&nbsp;California&nbsp;Norte</option>
+                                            <option value="BCS">Baja&nbsp;California&nbsp;Sur</option>
+                                            <option value="CAM">Campeche</option>
+                                            <option value="CHP">Chiapas</option>
+                                            <option value="MEX">Estado&nbsp;de&nbsp;M&eacute;xico</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Origen&nbsp;del&nbsp;recurso
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="recursoCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="IP">Ingresos&nbsp;propios</option>
+                                            <option value="IF">Ingresos&nbsp;federales</option>
+                                            <option value="IM">Ingresos&nbsp;mixtos</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Regimen&nbsp;fiscal
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="regimenCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="605">Sueldos&nbsp;y&nbsp;salarios</option>
+                                            <option value="612">Actividades&nbsp;profesionales&nbsp;y&nbsp;empresariales</option>
+                                            <option value="614">Ingresos&nbsp;por&nbsp;intereses</option>
+                                            <option value="616">Sin&nbsp;obligaciones&nbsp;fiscales</option>
+                                            <option value="615">Obtenci&oacute;n&nbsp;de&nbsp;tiempo</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Periodicidad&nbsp;de&nbsp;pago
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="periodicidadCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="1">Diario</option>
+                                            <option value="2">Semanal</option>
+                                            <option value="3">Catorcenal</option>
+                                            <option value="4">Quincenal</option>
+                                            <option value="5">Mensual</option>
+                                            <option value="6">Bimestral</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Tipo&nbsp;de&nbsp;n&oacute;mina
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="tipoCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="O">Ordinaria</option>
+                                            <option value="E">Extraordinaria</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Tipo&nbsp;de&nbsp;percepci&oacute;n
+                                    </td>
+                                    <td>
+                                        <select class="custom-select custom-select-sm" id="percepcionCrearNomina" required="required">
+                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
+                                            <option value="1">Salarios</option>
+                                            <option value="2">Aguinaldo</option>
+                                            <option value="10">Premios&nbsp;por&nbsp;puntualidad</option>
+                                            <option value="12">Gastos&nbsp;m&eacute;dicos&nbsp;mayores</option>
+                                            <option value="14">Subsidios&nbsp;por&nbsp;incapacidad</option>
+                                            <option value="19">Horas&nbsp;extra</option>
+                                            <option value="20">Prima&nbsp;dominical</option>
+                                            <option value="21">Prima&nbsp;vacacional</option>
+                                            <option value="23">Pagos&nbsp;por&nbsp;separaci&oacute;n</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">
+                                        <input type="submit" value="Registrar" class="btn btn-success"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </center>
+                </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>
     </body>

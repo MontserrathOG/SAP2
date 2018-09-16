@@ -66,7 +66,7 @@
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="text" id="despedirIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="despedirIdEmpleado" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

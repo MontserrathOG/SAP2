@@ -66,7 +66,7 @@
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="text" id="actividadIdEmp" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="actividadIdEmp" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

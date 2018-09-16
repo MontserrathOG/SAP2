@@ -101,12 +101,12 @@
                                     <td>
                                         <select class="custom-select custom-select-sm" id="areaContratarEmp" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
-                                            <option value="Recursos Humanos">Recursos&nbsp;Humanos</option>
-                                            <option value="Ventas">Ventas</option>
-                                            <option value="Compras">Compras</option>
-                                            <option value="Inventario">Invetario</option>
-                                            <option value="Gerencia">Gerencia</option>
-                                            <option value="Contabilidad">Contabilidad</option>
+                                            <option value="1">Recursos&nbsp;Humanos</option>
+                                            <option value="2">Ventas</option>
+                                            <option value="3">Compras</option>
+                                            <option value="4">Invetario</option>
+                                            <option value="5">Gerencia</option>
+                                            <option value="6">Contabilidad</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -123,9 +123,9 @@
                                     <td>
                                         <select class="custom-select custom-select-sm" id="puestoContratarEmp" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;puesto...</option>
-                                            <option value="Administrador">Administrador</option>
-                                            <option value="Empleado">Empleado&nbsp;de&nbsp;planta</option>
-                                            <option value="Asistente">Asistente</option>
+                                            <option value="1">Administrador</option>
+                                            <option value="2">Empleado&nbsp;de&nbsp;planta</option>
+                                            <option value="3">Asistente</option>
                                         </select>
                                     </td>
                                 </tr>

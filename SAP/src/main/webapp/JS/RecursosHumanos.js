@@ -29,15 +29,15 @@ $(document).ready(function(){
     $("#puestoContratarEmp").change(function(){
         var puesto = $("#puestoContratarEmp").val();
         switch(puesto){
-            case "Administrador":
+            case "1":
                 $("#horarioContratarEmp").val("7:00 - 18:00");
                 $("#sueldoContratarEmp").val("5000.00");
                 break;
-            case "Empleado":
+            case "2":
                 $("#horarioContratarEmp").val("7:00 - 16:00");
                 $("#sueldoContratarEmp").val("3500.00");
                 break;
-            case "Asistente":
+            case "3":
                 $("#horarioContratarEmp").val("7:00 - 15:00");
                 $("#sueldoContratarEmp").val("4000.00");
                 break;
@@ -77,15 +77,15 @@ $(document).ready(function(){
     $("#puestoModificarEmp").change(function(){
         var puesto = $("#puestoModificarEmp").val();
         switch(puesto){
-            case "Administrador":
+            case "1":
                 $("#horarioModificarEmp").val("7:00 - 18:00");
                 $("#sueldoModificarEmp").val("5000.00");
                 break;
-            case "Empleado":
+            case "2":
                 $("#horarioModificarEmp").val("7:00 - 16:00");
                 $("#sueldoModificarEmp").val("3500.00");
                 break;
-            case "Asistente":
+            case "3":
                 $("#horarioModificarEmp").val("7:00 - 15:00");
                 $("#sueldoModificarEmp").val("4000.00");
                 break;
