@@ -58,7 +58,9 @@
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
-                    <scroll-container></scroll-container>
+                    <scroll-container>
+                        
+                    </scroll-container>
                 </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>
