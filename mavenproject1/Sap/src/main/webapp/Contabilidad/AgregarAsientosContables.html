@@ -93,26 +93,79 @@
             </div>            
         </div>
         <!--Columna Central-->
-        <div class="col-xs-6 col-md-6 central table-responsive">              
-                    <table class="tablas table">
-                        <tr>
-                            <th>N&uacute;mero de asiento</th>
-                            <th>Tipo de Asiento</th>
-                            <th>Monto</th>
-                            <th>Concepto</th>
-                            <th>Fecha</th>
-                            <th>Tipo de Movimiento</th>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Entradas</td>
-                            <td>$1000.00</td>
-                            <td>venta de equipo</td>
-                            <td>01/01/2018</td>
-                            <td>Abono</td>
-                        </tr>
-                        
-                    </table>               
+        <div class="col-xs-6 col-md-6 central">
+            <div class="jumbotron">
+                <div class="container">
+                    <h4 class="titulo">Agregar Asiento Contable</h4>
+                    <br>
+                    <div class="container">
+                        <form action="" method="post">                
+                            <div class="row">                        
+                                <div class="col-xs-8">
+                                    <label for="tipoa">Tipo de Asiento:</label>
+                                </div>	
+                                <div class="col-xs-4">      
+                                    <select name="tipoa" id="tipoa" class="form-control">
+                                        <option>Asientos operativos</option>
+                                        <option>Asientos entradas</option>
+                                        <option>Asientos salidas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">                        
+                                <div class="col-xs-8">
+                                    <label for="numasiento">N&uacute;mero de asiento:</label>
+                                </div>	
+                                <div class="col-xs-4">      
+                                    <input id="numasiento" name="numasiento" type="text" class="form-control"/>
+                                </div>
+                            </div>         
+                            <div class="row">                        
+                                <div class="col-xs-8">
+                                    <label for="monto">Monto de Verificaci&oacute;n:</label>
+                                </div>	
+                                <div class="col-xs-4">      
+                                    <input id="monto" name="monto" class="form-control" type="text"/>                                    
+                                </div>
+                            </div>
+                            <div class="row">                        
+                                <div class="col-xs-8">
+                                    <label for="concepto">Concepto:</label>
+                                </div>	
+                                <div class="col-xs-4">      
+                                    <input id="concepto" name="concepto" class="form-control" type="text"/>                                    
+                                </div>
+                            </div>
+                            <div class="row">                        
+                                <div class="col-xs-8">
+                                    <label for="fecha">Fecha:</label>
+                                </div>	
+                                <div class="col-xs-4">      
+                                    <input id="fecha" name="fecha" class="form-control" type="date"/>
+                                </div>
+                            </div>
+                            <div class="row">                        
+                                <div class="col-xs-8">
+                                    <label for="movimiento">Tipo de Movimiento:</label>
+                                </div>	
+                                <div class="col-xs-4">      
+                                    <input name="movimiento" type="radio" value=""/>Cargo
+                                    <input name="movimiento" type="radio" value=""/>Abono
+                                </div>
+                            </div>
+                             <div class="row">       
+                                <br/>
+                                <div class="col-xs-6">
+                                    <input type="submit" value="Cancelar" class="btn-lg"/>
+                                </div>	
+                                <div class="col-xs-6">      
+                                    <input type="submit" value="Agregar" class="btn-lg"/>
+                                </div>
+                            </div>                                                  
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         <!--columna de la derecha-->
         <div class="col-xs-3 col-md-3 derecha table-responsive">

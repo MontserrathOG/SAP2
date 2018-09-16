@@ -1,3 +1,7 @@
+/*general*/
+h4{
+    font-weight: bold;
+}
 /* parte izquierda de la pagina*/
 .izquierda{
 	margin:0;
@@ -36,3 +40,22 @@
 .titulo{
 	text-align:center;
 	}
+/*Seccion para tablas*/        
+/*Titulos de las tablas(encabezados)*/
+.tablas{
+    margin:30px auto;
+}
+.tablas tr th{
+    text-align: center;
+    color: white;
+    background: #007bff;    
+    border-color: black;
+    border-style: solid;
+    padding: 2px;
+        
+}
+.tablas tr td{
+        padding: 2px;
+        text-align: center;
+        border-style: solid;
+        }        
