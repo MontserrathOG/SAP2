@@ -54,11 +54,73 @@
   </div>
   <!-- /.container-fluid --> 
 </nav>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.2.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
+<!--Contenedor principal de la pagina-->
+<div class="container-fluid">
+    <!--HAciendo una fila para dividir el contenedor en columnas-->
+    <div class="row">
+        <!--Columna de la izquierda-->
+        <div class="col-xs-3 col-md-3 izquierda">            
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="container">
+                    <form action="" method="post">
+                        <div class="row">                        
+                            <div class="col-xs-2">
+                                <input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar"/>
+                            </div>
+                        </div>
+                        <div class="row">                        
+                            <div class="col-xs-2">
+                              <input type="submit" value="buscar"/>       
+                            </div>
+                        </div>                    
+                    </form>
+                </div>
+                <hr/>
+                <table class="tabla">
+                	<tr>
+                    	<td>
+                    		<a href="AgregarCuentaCliente.html">Agregar Cuenta Contable</a>
+                        </td>
+                    </tr>
+                	<tr>
+                    	<td>
+                    		<a href="EliminarCuentaCliente.html">Eliminar Cuenta Contable</a>
+                        </td>
+                    </tr>
+                </table>
+              </div>
+            </div>            
+        </div>
+        <!--Columna Central-->
+        <div class="col-xs-6 col-md-6 central table-responsive">   
+                    <h1 class="titulo">Cuentas Clientes</h1>
+                    <table class="tablas table">
+                        <tr>
+                            <th>Cuenta</th>
+                            <th>Cuenta Superior</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>tipo de cuenta</th>
+                            <th>clase cuenta</th>
+                            <th>Clase SAT</th>
+                            <th>Tipo Naturaleza</th>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td></td>
+                            <td>Activo</td>
+                            <td>t&iacute;tulo</td>
+                            <td>sint&eacute;tica</td>
+                            <td>100-Activo</td>
+                            <td>Deudora</td>
+                        </tr>
+                        
+                    </table>               
+        </div>
+        <!--columna de la derecha-->
+        <div class="col-xs-3 col-md-3 derecha table-responsive">
+        </div>
+    </div>
+</div>
 </body>
 </html>

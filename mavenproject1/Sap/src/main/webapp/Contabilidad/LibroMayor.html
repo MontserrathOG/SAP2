@@ -54,11 +54,87 @@
   </div>
   <!-- /.container-fluid --> 
 </nav>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.2.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
+<!--Contenedor principal de la pagina-->
+<div class="container-fluid">
+    <!--HAciendo una fila para dividir el contenedor en columnas-->
+    <div class="row">
+        <!--Columna de la izquierda-->
+        <div class="col-xs-3 col-md-3 izquierda">            
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="container">
+                    <form action="" method="post">
+                        <div class="row">                        
+                            <div class="col-xs-2">
+                                <input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar"/>
+                            </div>
+                        </div>
+                        <div class="row">                        
+                            <div class="col-xs-2">
+                              <input type="submit" value="buscar"/>       
+                            </div>
+                        </div>                    
+                    </form>
+                </div>
+                <hr/>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="reporte">Selecciona el tipo de Reporte:</label>
+                                    <select name="reporte" class="form-control">
+                                        <option>sintetico</option>
+                                    </select>                                   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="ejercicio">Selecciona Periodo:</label>
+                                    <select name="ejercicio" class="form-control">
+                                        <option>2018</option>
+                                        <option>2017</option>
+                                    </select>                                   
+                            </td>
+                        </tr>
+                        <tr>                           
+                            <td>
+                                <br/>
+                                <div class="col-xs-2">
+                                    <input type="submit" value="Generar"/>       
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+              </div>
+            </div>            
+        </div>
+        <!--Columna Central-->
+        <div class="col-xs-6 col-md-6 central table-responsive">              
+                    <table class="tablas table">
+                        <tr>
+                            <th>Cuenta</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>Tipo de Cuenta</th>
+                            <th>Clase Cuenta</th>
+                            <th>C&oacute;digo SAT</th>
+                            <th>Tipo de Naturaleza</th>
+                        </tr>
+                        <tr>
+                            <td>100</td>
+                            <td>Activo</td>
+                            <td>t&iacute;tulo</td>
+                            <td>sint&eacute;tica</td>
+                            <td>100-activo</td>
+                            <td>deudora</td>
+                        </tr>
+                        
+                    </table>               
+        </div>
+        <!--columna de la derecha-->
+        <div class="col-xs-3 col-md-3 derecha table-responsive">
+        </div>
+    </div>
+</div>
 </body>
 </html>
