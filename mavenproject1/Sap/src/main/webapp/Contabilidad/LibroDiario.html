@@ -53,11 +53,91 @@
   </div>
   <!-- /.container-fluid --> 
 </nav>
-
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
-<script src="js/jquery-1.11.2.min.js"></script>
-
-<!-- Include all compiled plugins (below), or include individual files as needed --> 
-<script src="js/bootstrap.js"></script>
+<!--Contenedor principal de la pagina-->
+<div class="container-fluid">
+    <!--HAciendo una fila para dividir el contenedor en columnas-->
+    <div class="row">
+        <!--Columna de la izquierda-->
+        <div class="col-xs-3 col-md-3 izquierda">            
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="container">
+                    <form action="" method="post">
+                        <div class="row">                        
+                            <div class="col-xs-2">
+                                <input id="clave" name="clave" class="form-control" type="text" placeholder="ingresa clave a buscar"/>
+                            </div>
+                        </div>
+                        <div class="row">                        
+                            <div class="col-xs-2">
+                              <input type="submit" value="buscar"/>       
+                            </div>
+                        </div>                    
+                    </form>
+                </div>
+                <hr/>
+                <form>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="reporte">Selecciona el tipo de Reporte:</label>
+                                    <select name="reporte" class="form-control">
+                                        <option>sintetico</option>
+                                    </select>                                   
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="ejercicio">Selecciona Periodo:</label>
+                                    <select name="ejercicio" class="form-control">
+                                        <option>2018</option>
+                                        <option>2017</option>
+                                    </select>                                   
+                            </td>
+                        </tr>
+                        <tr>                           
+                            <td>
+                                <br/>
+                                <div class="col-xs-2">
+                                    <input type="submit" value="Generar"/>       
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+              </div>
+            </div>            
+        </div>
+        <!--Columna Central-->
+        <div class="col-xs-6 col-md-6 central table-responsive">              
+                    <table class="tablas table">
+                        <tr>
+                            <th>N&uacute;mero de asiento</th>
+                            <th>Nombre del negocio</th>
+                            <th>Mes</th>
+                            <th>Folio del Mayor</th>
+                            <th>Descripci&oacute;n</th>
+                            <th>Parcial</th>
+                            <th>Cargo</th>
+                            <th>Abono</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Tienda Departamental</td>
+                            <td>Febrero</td>
+                            <td></td>
+                            <td>Mobiliario y Aquipo de oficina</td>
+                            <td></td>
+                            <td>$1000.00</td>
+                            <td>$2000.00</td>
+                        </tr>
+                        
+                    </table>               
+        </div>
+        <!--columna de la derecha-->
+        <div class="col-xs-3 col-md-3 derecha table-responsive">
+        </div>
+    </div>
+</div>
 </body>
 </html>
