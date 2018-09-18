@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>Eliminar&nbsp;Nómina</title>
+        <title>Eliminar&nbsp;N&oacute;mina</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -66,7 +66,7 @@
                                         N&uacute;mero&nbsp;de&nbsp;n&oacute;mina
                                     </td>
                                     <td>
-                                        <input type="text" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

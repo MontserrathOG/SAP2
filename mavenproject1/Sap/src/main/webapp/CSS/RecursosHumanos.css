@@ -6,3 +6,7 @@ scroll-container {
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
+
+.pantallaCompleta{
+    width: 100%;
+}

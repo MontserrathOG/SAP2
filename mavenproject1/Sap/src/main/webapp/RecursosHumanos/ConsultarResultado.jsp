@@ -1,6 +1,6 @@
 <%-- 
-    Document   : BuscarEmpleado
-    Created on : 31/08/2018, 01:31:40 PM
+    Document   : ConsultarResultado
+    Created on : 15/09/2018, 02:17:43 PM
     Author     : Windows 10 Pro
 --%>
 
@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>Buscar&nbsp;Empleado</title>
+        <title>Consultar&nbsp;N&oacute;mina</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -58,43 +58,67 @@
             </div><!-- FIN DE NAVBAR -->
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
-                    <center>
-                        <form method="POST" action="BuscarResultado.jsp" autocomplete="off" id="formBuscarEmp" name="formBuscarEmp">
-                            <table>
-                                <tr>
-                                    <td>
-                                        ID&nbsp;del&nbsp;empleado
-                                    </td>
-                                    <td>
-                                        <input type="number" id="buscarIdEmpleado" class="form-control form-control-sm" required="required"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        &Aacute;rea
-                                    </td>
-                                    <td>
-                                        <select class="form-control form-control-sm">
-                                            <option value="" selected="selected">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
-                                            <option value="Recursos Humanos">Recursos&nbsp;Humanos</option>
-                                            <option value="Ventas">Ventas</option>
-                                            <option value="Compras">Compras</option>
-                                            <option value="Inventario">Invetario</option>
-                                            <option value="Gerencia">Gerencia</option>
-                                            <option value="Contabilidad">Contabilidad</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <center>
-                                            <input type="submit" class="btn btn-success" value="Buscar"/>
-                                        </center>
-                                    </td>
-                                </tr>
-                            </table>
-                        </form>
-                    </center>
+                    <scroll-container>
+                        <table align="center" class="table-bordered pantallaCompleta">
+                            <tr>
+                                <td>
+                                    N&uacute;mero&nbsp;n&oacute;mina
+                                </td>
+                                <td>
+                                    Empleado
+                                </td>
+                                <td>
+                                    Banco
+                                </td>
+                                <td>
+                                    Estado
+                                </td>
+                                <td>
+                                    Origen&nbsp;recurso
+                                </td>
+                                <td>
+                                    Periodicidad
+                                <td>
+                                    R&eacute;gimen&nbsp;fiscal
+                                </td>
+                                <td>
+                                    Tipo&nbsp;n&oacute;mina
+                                </td>
+                                <td>
+                                    Tipo&nbsp;percepci&oacute;n
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                                <td>
+                                    Valor
+                                </td>
+                            </tr>
+                        </table>
+                    </scroll-container>
                 </div>
             </div><!-- FIN DE SECCION PRINCIPAL -->
         </div>

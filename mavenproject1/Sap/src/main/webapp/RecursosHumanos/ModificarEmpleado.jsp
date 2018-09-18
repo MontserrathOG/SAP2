@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="" autocomplete="off">
+                        <form method="POST" action="ModificarResultado.jsp" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="text" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

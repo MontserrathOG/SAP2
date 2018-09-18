@@ -15,7 +15,7 @@
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <link href="../CSS/RecursosHumanos.css" rel="stylesheet" type="text/css"/>
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
-        <title>Consultar&nbsp;Nómina</title>
+        <title>Consultar&nbsp;N&oacute;mina</title>
     </head>
     <body>
         <div class="container-fluid">
@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="" autocomplete="off">
+                        <form method="POST" action="ConsultarResultado.jsp" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
-                                        ID&nbsp;del&nbsp;empleado
+                                        ID&nbsp;de&nbsp;n&oacute;mina
                                     </td>
                                     <td>
-                                        <input type="text" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
