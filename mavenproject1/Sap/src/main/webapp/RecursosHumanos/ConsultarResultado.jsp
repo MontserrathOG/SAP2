@@ -68,6 +68,9 @@
                                     Empleado
                                 </td>
                                 <td>
+                                    Cuenta
+                                </td>
+                                <td>
                                     Banco
                                 </td>
                                 <td>
@@ -89,6 +92,9 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>
+                                    Valor
+                                </td>
                                 <td>
                                     Valor
                                 </td>

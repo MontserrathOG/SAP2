@@ -79,6 +79,14 @@
                                 </tr>
                                 <tr>
                                     <td>
+                                        Cuenta
+                                    </td>
+                                    <td>
+                                        <input type="number" id="cuentaCrearNomina" class="form-control form-control-sm" required="required"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         Banco
                                     </td>
                                     <td>
@@ -133,7 +141,7 @@
                                             <option value="612">Actividades&nbsp;profesionales&nbsp;y&nbsp;empresariales</option>
                                             <option value="614">Ingresos&nbsp;por&nbsp;intereses</option>
                                             <option value="616">Sin&nbsp;obligaciones&nbsp;fiscales</option>
-                                            <option value="615">Obtenci&oacute;n&nbsp;de&nbsp;tiempo</option>
+                                            <option value="615">Obtenci&oacute;n&nbsp;de&nbsp;premios</option>
                                         </select>
                                     </td>
                                 </tr>
