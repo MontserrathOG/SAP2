@@ -21,7 +21,7 @@
         
         <div class="rounded" id="login">
             
-            <form class="rounded" id="form-login" action="validador.jsp" method="post">
+            <form class="rounded" id="form-login" action="Login" method="POST" autocomplete="off">
                 <fieldset class="rounded" id="campo-login">
                     <legend>Bienvenido</legend>
                     <table id="acceso">
