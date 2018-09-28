@@ -23,7 +23,7 @@ public class Conexion {
     public void openDB() throws SQLException {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
-        connProp.put("password", "Bioshock05");
+        connProp.put("password", "root");
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SAP", connProp);
     }
 
