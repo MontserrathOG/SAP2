@@ -23,8 +23,8 @@ public class Conexion {
     public void openDB() throws SQLException {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
-        connProp.put("password", "root");
-        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/BDSAPPW", connProp);
+        connProp.put("password", "Bioshock05");
+        conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SAP", connProp);
     }
 
     /**
@@ -44,12 +44,12 @@ public class Conexion {
         return rs;
     }
     
-    public ArrayList consulta(String campos, String tabla, String referencia, String condicion, String extra, int cantidad) throws SQLException {
+    public ArrayList consulta(String campos, String tabla, String condicion, int cantidad) throws SQLException {
         openDB();
         if(condicion.equals("")){condicion="is not null";}
         ArrayList r=new ArrayList();
         PreparedStatement ps;
-        ps=conn.prepareStatement("SELECT "+campos+" FROM "+tabla+" WHERE "+referencia+" "+condicion+" "+extra);
+        ps=conn.prepareStatement("SELECT "+campos+" FROM "+tabla+" WHERE "+condicion);
         ResultSet rs= ps.executeQuery();
         while(rs.next()){
             for(int i = 1 ; i <= cantidad ; i++){r.add(rs.getObject(i));}

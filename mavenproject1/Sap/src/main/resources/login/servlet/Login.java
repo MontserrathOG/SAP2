@@ -1,7 +1,12 @@
 package login.servlet;
 
+import db.pojo.Conexion;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,23 +26,31 @@ public class Login extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             String usuario = request.getParameter("user");
             String pass = request.getParameter("pass");
-            if(usuario.equals("rh")){
-                response.sendRedirect("RecursosHumanos/rh_index.jsp");
-            }else{
-                if(usuario.equals("conta")){
-                    response.sendRedirect("Contabilidad/Contabilidad.html");
-                }else{
-                    if(usuario.equals("gerencia")){
+            Conexion c = new Conexion();
+            ArrayList lista = c.consulta("area", "empleado", "id = "+usuario+" and contrasena = '"+pass+"'",1);
+            if(!lista.isEmpty()){
+                Integer area = Integer.parseInt(lista.get(0).toString());
+                switch(area){
+                    case 1 :
                         response.sendRedirect("Gerencia/InicioGerencia.html");
-                    }else{
-                        response.sendRedirect("../index.jsp");
-                    }
+                        break;
+                    case 2 :
+                        response.sendRedirect("RecursosHumanos/rh_index.jsp");
+                        break;
+                    case 3 :
+                        response.sendRedirect("Contabilidad/Contabilidad.html");
+                        break;
+                    default:
+                        response.sendRedirect("index.jsp");
+                        break;
                 }
+            }else{
+                response.sendRedirect("index.jsp");
             }
         }
     }
@@ -54,7 +67,13 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
