@@ -33,8 +33,13 @@ public class ModificarEmpleado extends HttpServlet {
         Conexion c = new Conexion();
         ArrayList lista = c.consulta("nombre,primer_apellido,segundo_apellido,nacionalidad,curp,rfc,edad,lugar_nacimiento,direccion,telefono,"
                     + "area,puesto,horario,sueldo,cuenta,id","empleado", "id = "+empleado, 16);
-        request.getSession().setAttribute("empleado",lista);
-        response.sendRedirect("RecursosHumanos/ModificarResultado.jsp");
+        if(!lista.isEmpty()){
+            request.getSession().setAttribute("empleado",lista);
+            response.sendRedirect("RecursosHumanos/ModificarResultado.jsp");
+        }else{
+            request.getSession().setAttribute("motivo", "El empleado no existe");
+            response.sendRedirect("RecursosHumanos/Error.jsp");
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

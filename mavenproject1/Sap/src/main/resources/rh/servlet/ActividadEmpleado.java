@@ -39,8 +39,11 @@ public class ActividadEmpleado extends HttpServlet {
             ArrayList lista = c.consulta("id", "empleado", "id = "+ empleado, 1);
             if(!lista.isEmpty()){
                 c.actualizar("actividad = '" + actividad + "'", "empleado", "id = " + empleado);
+                response.sendRedirect("RecursosHumanos/ActividadEmpleado.jsp");
+            }else{
+                request.getSession().setAttribute("motivo", "El empleado no existe");
+                response.sendRedirect("RecursosHumanos/Error.jsp");
             }
-            response.sendRedirect("RecursosHumanos/ActividadEmpleado.jsp");
         }
     }
 
