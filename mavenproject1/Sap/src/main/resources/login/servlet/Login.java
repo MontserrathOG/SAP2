@@ -35,6 +35,7 @@ public class Login extends HttpServlet {
             ArrayList lista = c.consulta("area", "empleado", "id = "+usuario+" and contrasena = '"+pass+"'",1);
             if(!lista.isEmpty()){
                 Integer area = Integer.parseInt(lista.get(0).toString());
+                c.insertar("descripcion", "log", "'Inicio de sesion para "+usuario+"'");
                 switch(area){
                     case 1 :
                         response.sendRedirect("Gerencia/InicioGerencia.html");
@@ -50,6 +51,7 @@ public class Login extends HttpServlet {
                         break;
                 }
             }else{
+                c.insertar("descripcion", "log", "'Inicio de sesion fallido para "+usuario+"'");
                 response.sendRedirect("index.jsp");
             }
         }

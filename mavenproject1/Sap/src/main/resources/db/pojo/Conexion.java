@@ -23,7 +23,7 @@ public class Conexion {
     public void openDB() throws SQLException {
         Properties connProp = new Properties();
         connProp.put("user", "postgres");
-        connProp.put("password", "root");
+        connProp.put("password", "Bioshock05");
         conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/SAP", connProp);
     }
 
@@ -46,7 +46,6 @@ public class Conexion {
     
     public ArrayList consulta(String campos, String tabla, String condicion, int cantidad) throws SQLException {
         openDB();
-        if(condicion.equals("")){condicion="is not null";}
         ArrayList r=new ArrayList();
         PreparedStatement ps;
         ps=conn.prepareStatement("SELECT "+campos+" FROM "+tabla+" WHERE "+condicion);
@@ -58,11 +57,10 @@ public class Conexion {
         return r;
     }
     
-    public Integer borrar(String tabla, String referencia, String condicion) throws SQLException {
+    public Integer borrar(String tabla, String referencia) throws SQLException {
         openDB();
-        if(condicion.equals("")){condicion="is not null";}
         PreparedStatement ps;
-        ps=conn.prepareStatement("DELETE FROM "+tabla+" WHERE "+referencia+" "+condicion);
+        ps=conn.prepareStatement("DELETE FROM "+tabla+" WHERE "+referencia);
         Integer rs = ps.executeUpdate();
         closeDB();
         return rs;
@@ -72,18 +70,14 @@ public class Conexion {
      * @param campos
      * @param tabla
      * @param referencia
-     * @param condicion
      * @return
      * @throws SQLException 
      */
     
-    public Integer actualizar(String campos, String tabla, String referencia, String condicion) throws SQLException {
+    public Integer actualizar(String campos, String tabla, String referencia) throws SQLException {
         openDB();
-        if(condicion.equals("")){
-            condicion="is not null";
-        }
         PreparedStatement ps;
-        ps=conn.prepareStatement("UPDATE "+tabla+" SET "+campos+" WHERE "+referencia+" "+condicion);
+        ps=conn.prepareStatement("UPDATE "+tabla+" SET "+campos+" WHERE "+referencia);
         Integer rs = ps.executeUpdate();
         closeDB();
         return rs;
