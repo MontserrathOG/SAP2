@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="BuscarResultado.jsp" autocomplete="off" id="formBuscarEmp" name="formBuscarEmp">
+                        <form method="POST" action="BuscarEmpleado" autocomplete="off" id="formBuscarEmp" name="formBuscarEmp">
                             <table>
                                 <tr>
                                     <td>
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="number" id="buscarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="buscarIdEmpleado" name="buscarIdEmpleado" class="form-control form-control-sm"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,14 +74,14 @@
                                         &Aacute;rea
                                     </td>
                                     <td>
-                                        <select class="form-control form-control-sm">
+                                        <select class="form-control form-control-sm" id="buscarAreaEmpleado" name="buscarAreaEmpleado">
                                             <option value="" selected="selected">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
-                                            <option value="Recursos Humanos">Recursos&nbsp;Humanos</option>
-                                            <option value="Ventas">Ventas</option>
-                                            <option value="Compras">Compras</option>
-                                            <option value="Inventario">Invetario</option>
-                                            <option value="Gerencia">Gerencia</option>
-                                            <option value="Contabilidad">Contabilidad</option>
+                                            <option value="2">Recursos&nbsp;Humanos</option>
+                                            <option value="4">Ventas</option>
+                                            <option value="5">Compras</option>
+                                            <option value="6">Invetario</option>
+                                            <option value="1">Gerencia</option>
+                                            <option value="3">Contabilidad</option>
                                         </select>
                                     </td>
                                 </tr>

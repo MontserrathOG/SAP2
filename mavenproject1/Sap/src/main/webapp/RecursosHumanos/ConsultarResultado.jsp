@@ -4,7 +4,11 @@
     Author     : Windows 10 Pro
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    ArrayList lista = (ArrayList) request.getAttribute("nomina");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,67 +65,29 @@
                     <scroll-container>
                         <table align="center" class="table-bordered pantallaCompleta">
                             <tr>
-                                <td>
-                                    N&uacute;mero&nbsp;n&oacute;mina
-                                </td>
-                                <td>
-                                    Empleado
-                                </td>
-                                <td>
-                                    Cuenta
-                                </td>
-                                <td>
-                                    Banco
-                                </td>
-                                <td>
-                                    Estado
-                                </td>
-                                <td>
-                                    Origen&nbsp;recurso
-                                </td>
-                                <td>
-                                    Periodicidad
-                                <td>
-                                    R&eacute;gimen&nbsp;fiscal
-                                </td>
-                                <td>
-                                    Tipo&nbsp;n&oacute;mina
-                                </td>
-                                <td>
-                                    Tipo&nbsp;percepci&oacute;n
-                                </td>
+                                <td>ID</td>
+                                <td>Empleado</td>
+                                <td>Cantidad</td>
+                                <td>Estado</td>
+                                <td>Origen&nbsp;del&nbsp;recurso</td>
+                                <td>Regimen</td>
+                                <td>Periodicidad</td>
+                                <td>Tipo</td>
+                                <td>Percepci&oacute;n</td>
+                                <td>Situaci&oacute;n</td>
                             </tr>
                             <tr>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
+                                <%
+                                    for(int i = 0 ; i < lista.size() ; i++){
+                                        if(i%10 == 0){
+                                            %>
+                            </tr>
+                            <tr>
+                                            <%
+                                        }
+                                        lista.get(i);
+                                    }
+                                %>
                             </tr>
                         </table>
                     </scroll-container>

@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="ConsultarResultado.jsp" autocomplete="off">
+                        <form method="POST" action="BuscarNomina" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
                                         ID&nbsp;de&nbsp;n&oacute;mina
                                     </td>
                                     <td>
-                                        <input type="number" id="modificarIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="buscarIdNomina" name="buscarIdNomina" class="form-control form-control-sm"/>
                                     </td>
                                 </tr>
                                 <tr>

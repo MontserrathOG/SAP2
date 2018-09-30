@@ -4,7 +4,11 @@
     Author     : Windows 10 Pro
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    ArrayList lista = (ArrayList) request.getAttribute("empleados");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,86 +65,37 @@
                     <scroll-container>
                         <table align="center" class="table-bordered pantallaCompleta">
                             <tr>
-                                <td>
-                                    Id
-                                </td>
-                                <td>
-                                    Nombre
-                                </td>
-                                <td>
-                                    Primer&nbsp;apellido
-                                </td>
-                                <td>
-                                    Segundo&nbsp;apellido
-                                </td>
-                                <td>
-                                    Puesto
-                                </td>
-                                <td>
-                                    &Aacute;rea
-                                </td>
-                                <td>
-                                    Sueldo
-                                </td>
-                                <td>
-                                    Horario
-                                </td>
-                                <td>
-                                    Direcci&oacute;n
-                                </td>
-                                <td>
-                                    Tel&eacute;fono
-                                </td>
-                                <td>
-                                    Status
-                                </td>
-                                <td>
-                                    Actividad
-                                </td>
-                                <td>
-                                    Cuenta
-                                </td>
+                                <td>ID</td>
+                                <td>Nombre</td>
+                                <td>Primer&nbsp;apellido</td>
+                                <td>Segundo&nbsp;apellido</td>
+                                <td>Nacionalidad</td>
+                                <td>CURP</td>
+                                <td>RFC</td>
+                                <td>Edad</td>
+                                <td>Lugar&nbsp;de&nbsp;nacimiento</td>
+                                <td>Direcci&oacute;n</td>
+                                <td>Tel&eacute;fono</td>
+                                <td>&Aacute;rea</td>
+                                <td>Puesto</td>
+                                <td>Horario</td>
+                                <td>Actividad</td>
+                                <td>Sueldo</td>
+                                <td>Cuenta</td>
+                                <td>Status</td>
                             </tr>
                             <tr>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
-                                <td>
-                                    Valor
-                                </td>
+                                <%
+                                    for(int i = 0 ; i < lista.size() ; i++){
+                                        if(i%19 == 0){
+                                            %>
+                            </tr>
+                            <tr>
+                                            <%
+                                        }
+                                        lista.get(i);
+                                    }
+                                %>
                             </tr>
                         </table>
                     </scroll-container>

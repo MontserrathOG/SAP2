@@ -59,7 +59,7 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" autocomplete="off" action="" id="formContratarEmp" name="formContratarEmp">
+                        <form method="POST" autocomplete="off" action="ContratarEmpleado" id="formContratarEmp" name="formContratarEmp">
                             <table>
                                 <tr>
                                     <td colspan="2">
@@ -79,13 +79,13 @@
                                         CURP
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="curpContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="curpContratarEmp" name="curpContratarEmp" required="required"/>
                                     </td>
                                     <td>
                                         RFC
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="rfcContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="rfcContratarEmp" name="rfcContratarEmp" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -93,13 +93,13 @@
                                         Nombre
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nombreContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nombreContratarEmp" name="nombreContratarEmp" required="required"/>
                                     </td>
                                     <td>
                                         &Aacute;rea
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="areaContratarEmp" required="required">
+                                        <select class="custom-select custom-select-sm" id="areaContratarEmp" name="areaContratarEmp" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
                                             <option value="1">Recursos&nbsp;Humanos</option>
                                             <option value="2">Ventas</option>
@@ -115,13 +115,13 @@
                                         Primer&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="paternoContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="paternoContratarEmp" name="paternoContratarEmp" required="required"/>
                                     </td>
                                     <td>
                                         Puesto
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="puestoContratarEmp" required="required">
+                                        <select class="custom-select custom-select-sm" id="puestoContratarEmp" name="puestoContratarEmp" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;puesto...</option>
                                             <option value="1">Administrador</option>
                                             <option value="2">Empleado&nbsp;de&nbsp;planta</option>
@@ -134,13 +134,13 @@
                                         Segundo&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="maternoContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="maternoContratarEmp" name="maternoContratarEmp" required="required"/>
                                     </td>
                                     <td>
                                         Tel&eacute;fono
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="telContratarEmp" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="telContratarEmp" name="telContratarEmp" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -148,13 +148,13 @@
                                         Edad
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="edadContratarEmp" disabled="disabled" min="18" max="80" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="edadContratarEmp" name="edadContratarEmp" disabled="disabled" min="18" max="80" required="required"/>
                                     </td>
                                     <td>
                                         Horario
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="horarioContratarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="horarioContratarEmp" name="horarioContratarEmp" disabled="disabled" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -162,13 +162,13 @@
                                         Lugar&nbsp;de&nbsp;nacimiento
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="lugarContratarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="lugarContratarEmp" name="lugarContratarEmp" disabled="disabled" required="required"/>
                                     </td>
                                     <td>
                                         Actividad
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="activContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="activContratarEmp" name="activContratarEmp" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -176,13 +176,13 @@
                                         Direcci&oacute;n
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="dirContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="dirContratarEmp" name="dirContratarEmp" required="required"/>
                                     </td>
                                     <td>
                                         Sueldo
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="sueldoContratarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="sueldoContratarEmp" name="sueldoContratarEmp" disabled="disabled" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -190,13 +190,13 @@
                                         Nacionalidad
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nacContratarEmp" disabled="disabled" value="Mexicana" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nacContratarEmp" name="nacContratarEmp" disabled="disabled" value="Mexicana" required="required"/>
                                     </td>
                                     <td>
                                         Cuenta&nbsp;bancaria
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="cuentaContratarEmp" maxlength="10" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="cuentaContratarEmp" name="cuentaContratarEmp" maxlength="16" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

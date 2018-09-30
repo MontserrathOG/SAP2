@@ -59,7 +59,7 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="" autocomplete="off">
+                        <form method="POST" action="CrearNomina" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
@@ -75,30 +75,6 @@
                                     </td>
                                     <td>
                                         <input type="number" id="cantidadCrearNomina" class="form-control form-control-sm" required="required"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Cuenta
-                                    </td>
-                                    <td>
-                                        <input type="number" id="cuentaCrearNomina" class="form-control form-control-sm" required="required"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        Banco
-                                    </td>
-                                    <td>
-                                        <select class="custom-select custom-select-sm" id="bancoCrearNomina" required="required">
-                                            <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
-                                            <option value="2">Banamex</option>
-                                            <option value="12">BBVA&nbsp;Bancomer</option>
-                                            <option value="14">Santander</option>
-                                            <option value="21">HSBC</option>
-                                            <option value="32">IXE</option>
-                                            <option value="36">INBURSA</option>
-                                        </select>
                                     </td>
                                 </tr>
                                 <tr>

@@ -4,7 +4,11 @@
     Author     : Windows 10 Pro
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+    ArrayList lista = (ArrayList) request.getAttribute("empleado");
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -59,8 +63,16 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" autocomplete="off" action="" id="formModificarEmp" name="formModificarEmp">
+                        <form method="POST" autocomplete="off" action="ActualizarEmpleado" id="formModificarEmp" name="formModificarEmp">
                             <table>
+                                <tr>
+                                    <td>
+                                        Empleado
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-control-sm" id="idModificarEmp" disabled="disabled" required="required" value="<% lista.get(16); %>"/>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td colspan="2">
                                         Lugar&nbsp;de&nbsp;origen
@@ -79,13 +91,13 @@
                                         CURP
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="curpModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="curpModificarEmp" required="required" value="<% lista.get(4); %>"/>
                                     </td>
                                     <td>
                                         RFC
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="rfcModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="rfcModificarEmp" required="required" value="<% lista.get(5); %>"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -93,13 +105,13 @@
                                         Nombre
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nombreModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nombreModificarEmp" required="required" value="<% lista.get(0); %>"/>
                                     </td>
                                     <td>
                                         &Aacute;rea
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="areaModificarEmp" required="required">
+                                        <select class="custom-select custom-select-sm" id="areaModificarEmp" required="required" value="<% lista.get(10); %>">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
                                             <option value="1">Recursos&nbsp;Humanos</option>
                                             <option value="2">Ventas</option>
@@ -115,13 +127,13 @@
                                         Primer&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="paternoModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="paternoModificarEmp" required="required" value="<% lista.get(1); %>"/>
                                     </td>
                                     <td>
                                         Puesto
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="puestoModificarEmp" required="required">
+                                        <select class="custom-select custom-select-sm" id="puestoModificarEmp" required="required" value="<% lista.get(11); %>">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;puesto...</option>
                                             <option value="1">Administrador</option>
                                             <option value="2">Empleado&nbsp;de&nbsp;planta</option>
@@ -134,13 +146,13 @@
                                         Segundo&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="maternoModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="maternoModificarEmp" required="required" value="<% lista.get(2); %>"/>
                                     </td>
                                     <td>
                                         Tel&eacute;fono
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="telModificarEmp" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="telModificarEmp" required="required" value="<% lista.get(9); %>"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -148,13 +160,13 @@
                                         Edad
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="edadModificarEmp" disabled="disabled" min="18" max="80" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="edadModificarEmp" disabled="disabled" min="18" max="80" value="<% lista.get(6); %>" required="required"/>
                                     </td>
                                     <td>
                                         Horario
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="horarioModificarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="horarioModificarEmp" value="<% lista.get(12); %>" disabled="disabled" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -162,13 +174,7 @@
                                         Lugar&nbsp;de&nbsp;nacimiento
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="lugarModificarEmp" disabled="disabled" required="required"/>
-                                    </td>
-                                    <td>
-                                        Actividad
-                                    </td>
-                                    <td>
-                                        <input type="text" class="form-control form-control-sm" id="activModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="lugarModificarEmp" value="<% lista.get(7); %>" disabled="disabled" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -176,13 +182,13 @@
                                         Direcci&oacute;n
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="dirModificarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="dirModificarEmp" value="<% lista.get(8); %>" required="required"/>
                                     </td>
                                     <td>
                                         Sueldo
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="sueldoModificarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="sueldoModificarEmp" value="<% lista.get(14); %>" disabled="disabled" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -190,13 +196,13 @@
                                         Nacionalidad
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nacModificarEmp" disabled="disabled" value="Mexicana" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nacModificarEmp" value="<% lista.get(3); %>" disabled="disabled" required="required"/>
                                     </td>
                                     <td>
                                         Cuenta&nbsp;bancaria
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="cuentaModificarEmp" maxlength="10" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="cuentaModificarEmp" value="<% lista.get(15); %>" maxlength="16" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
