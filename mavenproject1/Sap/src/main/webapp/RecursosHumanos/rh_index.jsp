@@ -17,7 +17,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>P&aacute;gina&nbsp;principal</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">

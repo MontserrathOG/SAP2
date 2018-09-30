@@ -17,7 +17,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>Contratar&nbsp;Empleado</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">
@@ -59,7 +59,7 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" autocomplete="off" action="ContratarEmpleado" id="formContratarEmp" name="formContratarEmp">
+                        <form method="POST" autocomplete="off" action="../ContratarEmpleado" onsubmit="return valida();" id="formContratarEmp" name="formContratarEmp">
                             <table>
                                 <tr>
                                     <td colspan="2">
@@ -79,13 +79,13 @@
                                         CURP
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="curpContratarEmp" name="curpContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" style="text-transform: uppercase;" id="curpContratarEmp" name="curpContratarEmp" onblur="datosCurp()" required="required"/>
                                     </td>
                                     <td>
                                         RFC
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="rfcContratarEmp" name="rfcContratarEmp" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" style="text-transform: uppercase;" id="rfcContratarEmp" name="rfcContratarEmp" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -101,12 +101,12 @@
                                     <td>
                                         <select class="custom-select custom-select-sm" id="areaContratarEmp" name="areaContratarEmp" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
-                                            <option value="1">Recursos&nbsp;Humanos</option>
-                                            <option value="2">Ventas</option>
-                                            <option value="3">Compras</option>
-                                            <option value="4">Invetario</option>
-                                            <option value="5">Gerencia</option>
-                                            <option value="6">Contabilidad</option>
+                                            <option value="1">Gerencia</option>
+                                            <option value="2">Recursos&nbsp;Humanos</option>
+                                            <option value="3">Contabilidad</option>
+                                            <option value="4">Ventas</option>
+                                            <option value="5">Compras</option>
+                                            <option value="6">Inventario</option>
                                         </select>
                                     </td>
                                 </tr>
@@ -140,7 +140,7 @@
                                         Tel&eacute;fono
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="telContratarEmp" name="telContratarEmp" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="telContratarEmp" name="telContratarEmp" minlength="10" maxlength="15" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -148,13 +148,13 @@
                                         Edad
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="edadContratarEmp" name="edadContratarEmp" disabled="disabled" min="18" max="80" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="edadContratarEmp" name="edadContratarEmp" min="18" max="80" required="required"/>
                                     </td>
                                     <td>
                                         Horario
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="horarioContratarEmp" name="horarioContratarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="horarioContratarEmp" name="horarioContratarEmp" required="required" readonly="readonly"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -162,7 +162,7 @@
                                         Lugar&nbsp;de&nbsp;nacimiento
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="lugarContratarEmp" name="lugarContratarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="lugarContratarEmp" name="lugarContratarEmp" required="required" readonly="readonly"/>
                                     </td>
                                     <td>
                                         Actividad
@@ -182,7 +182,7 @@
                                         Sueldo
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="sueldoContratarEmp" name="sueldoContratarEmp" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="sueldoContratarEmp" name="sueldoContratarEmp" required="required" readonly="readonly"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -190,7 +190,7 @@
                                         Nacionalidad
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nacContratarEmp" name="nacContratarEmp" disabled="disabled" value="Mexicana" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nacContratarEmp" name="nacContratarEmp" value="Mexicana" required="required" readonly="readonly"/>
                                     </td>
                                     <td>
                                         Cuenta&nbsp;bancaria

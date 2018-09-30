@@ -35,22 +35,22 @@ public class BuscarEmpleado extends HttpServlet {
         ArrayList lista;
         if(!area.isEmpty() && !empleado.isEmpty()){
             lista = c.consulta("id,nombre,primer_apellido,segundo_apellido,nacionalidad,curp,rfc,edad,lugar_nacimiento,direccion,telefono,"
-                    + "area,puesto,horario,actividad,sueldo,cuenta,status","empleado", "id = "+empleado+" and area = "+area, 17);
+                    + "area,puesto,horario,actividad,sueldo,cuenta,status","empleado", "id = "+empleado+" and area = "+area, 18);
         }else{
             if(!area.isEmpty() && empleado.isEmpty()){
                 lista = c.consulta("id,nombre,primer_apellido,segundo_apellido,nacionalidad,curp,rfc,edad,lugar_nacimiento,direccion,telefono,"
-                    + "area,puesto,horario,actividad,sueldo,cuenta,status", "empleado", "area = "+area, 19);
+                    + "area,puesto,horario,actividad,sueldo,cuenta,status", "empleado", "area = "+area, 18);
             }else{
                 if(area.isEmpty() && !empleado.isEmpty()){
                     lista = c.consulta("id,nombre,primer_apellido,segundo_apellido,nacionalidad,curp,rfc,edad,lugar_nacimiento,direccion,telefono,"
-                    + "area,puesto,horario,actividad,sueldo,cuenta,status", "empleado", "id = "+empleado, 19);
+                    + "area,puesto,horario,actividad,sueldo,cuenta,status", "empleado", "id = "+empleado, 18);
                 }else{
                     lista = c.consulta("id,nombre,primer_apellido,segundo_apellido,nacionalidad,curp,rfc,edad,lugar_nacimiento,direccion,telefono,"
-                    + "area,puesto,horario,actividad,sueldo,cuenta,status", "empleado", "id is not null", 19);
+                    + "area,puesto,horario,actividad,sueldo,cuenta,status", "empleado", "id is not null", 18);
                 }
             }
         }
-        request.setAttribute("empleados", lista);
+        request.getSession().setAttribute("empleados", lista);
         response.sendRedirect("RecursosHumanos/BuscarResultado.jsp");
     }
 

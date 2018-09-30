@@ -1,3 +1,4 @@
+
 import db.pojo.Conexion;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -45,6 +46,7 @@ public class ActualizarEmpleado extends HttpServlet {
         String sueldo = request.getParameter("sueldoModificarEmp");
         String nac = request.getParameter("nacModificarEmp");
         String cuenta = request.getParameter("cuentaModificarEmp");
+        System.out.println(empleado);
         c.actualizar("curp = '"+curp+"',rfc = '"+rfc+"', nombre = '"+nombre+"',primer_apellido = '"+paterno+"',segundo_apellido = '"+materno+
                 "',nacionalidad = '"+nac+"',edad = "+edad+",lugar_nacimiento = '"+lugar+"',direccion = '"+dir+"',telefono = '"+tel+
                 "',area = "+area+",puesto = "+puesto+",horario = '"+horario+"',sueldo = "+sueldo+",cuenta = '"+cuenta+"'"

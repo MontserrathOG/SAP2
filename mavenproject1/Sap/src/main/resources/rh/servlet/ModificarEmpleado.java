@@ -33,7 +33,7 @@ public class ModificarEmpleado extends HttpServlet {
         Conexion c = new Conexion();
         ArrayList lista = c.consulta("nombre,primer_apellido,segundo_apellido,nacionalidad,curp,rfc,edad,lugar_nacimiento,direccion,telefono,"
                     + "area,puesto,horario,sueldo,cuenta,id","empleado", "id = "+empleado, 16);
-        request.setAttribute("empleado",lista);
+        request.getSession().setAttribute("empleado",lista);
         response.sendRedirect("RecursosHumanos/ModificarResultado.jsp");
     }
 

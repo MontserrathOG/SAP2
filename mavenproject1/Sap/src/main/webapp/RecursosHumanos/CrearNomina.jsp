@@ -17,7 +17,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>Crear&nbsp;N&oacute;mina</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">
@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="CrearNomina" autocomplete="off">
+                        <form method="POST" action="../CrearNomina" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="number" id="idCrearNomina" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="idCrearNomina" name="idCrearNomina" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +74,7 @@
                                         Cantidad
                                     </td>
                                     <td>
-                                        <input type="number" id="cantidadCrearNomina" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" step="any" id="cantidadCrearNomina" name="cantidadCrearNomina" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -82,7 +82,7 @@
                                         Estado
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="estadoCrearNomina" required="required">
+                                        <select class="custom-select custom-select-sm" id="estadoCrearNomina" name="estadoCrearNomina" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
                                             <option value="AGU">Aguascalientes</option>
                                             <option value="BCN">Baja&nbsp;California&nbsp;Norte</option>
@@ -98,7 +98,7 @@
                                         Origen&nbsp;del&nbsp;recurso
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="recursoCrearNomina" required="required">
+                                        <select class="custom-select custom-select-sm" id="recursoCrearNomina" name="recursoCrearNomina" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
                                             <option value="IP">Ingresos&nbsp;propios</option>
                                             <option value="IF">Ingresos&nbsp;federales</option>
@@ -111,7 +111,7 @@
                                         Regimen&nbsp;fiscal
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="regimenCrearNomina" required="required">
+                                        <select class="custom-select custom-select-sm" id="regimenCrearNomina" name="regimenCrearNomina" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
                                             <option value="605">Sueldos&nbsp;y&nbsp;salarios</option>
                                             <option value="612">Actividades&nbsp;profesionales&nbsp;y&nbsp;empresariales</option>
@@ -126,7 +126,7 @@
                                         Periodicidad&nbsp;de&nbsp;pago
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="periodicidadCrearNomina" required="required">
+                                        <select class="custom-select custom-select-sm" id="periodicidadCrearNomina" name="periodicidadCrearNomina" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
                                             <option value="1">Diario</option>
                                             <option value="2">Semanal</option>
@@ -142,7 +142,7 @@
                                         Tipo&nbsp;de&nbsp;n&oacute;mina
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="tipoCrearNomina" required="required">
+                                        <select class="custom-select custom-select-sm" id="tipoCrearNomina" name="tipoCrearNomina" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
                                             <option value="O">Ordinaria</option>
                                             <option value="E">Extraordinaria</option>
@@ -154,7 +154,7 @@
                                         Tipo&nbsp;de&nbsp;percepci&oacute;n
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="percepcionCrearNomina" required="required">
+                                        <select class="custom-select custom-select-sm" id="percepcionCrearNomina" name="percepcionCrearNomina" required="required">
                                             <option selected="selected" value="">Selecciona&nbsp;una&nbsp;opci&oacute;n...</option>
                                             <option value="1">Salarios</option>
                                             <option value="2">Aguinaldo</option>

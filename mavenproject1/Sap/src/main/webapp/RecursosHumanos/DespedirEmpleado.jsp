@@ -17,7 +17,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>Despedir&nbsp;Empleado</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">
@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="DespedirEmpleado" autocomplete="off">
+                        <form method="POST" action="../DespedirEmpleado" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
                                         ID&nbsp;del&nbsp;empleado
                                     </td>
                                     <td>
-                                        <input type="number" id="despedirIdEmpleado" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="despedirIdEmpleado" name="despedirIdEmpleado" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

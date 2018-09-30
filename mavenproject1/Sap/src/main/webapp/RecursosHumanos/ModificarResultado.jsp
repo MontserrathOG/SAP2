@@ -7,7 +7,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    ArrayList lista = (ArrayList) request.getAttribute("empleado");
+    ArrayList lista = (ArrayList) request.getSession().getAttribute("empleado");
 %>
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>Modificar&nbsp;Empleado</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">
@@ -63,14 +63,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" autocomplete="off" action="ActualizarEmpleado" id="formModificarEmp" name="formModificarEmp">
+                        <form method="POST" autocomplete="off" action="../ActualizarEmpleado" onsubmit=" return validaM();" id="formModificarEmp" name="formModificarEmp">
                             <table>
                                 <tr>
                                     <td>
                                         Empleado
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="idModificarEmp" disabled="disabled" required="required" value="<% lista.get(16); %>"/>
+                                        <input type="text" class="form-control form-control-sm" id="idModificarEmp" name="idModificarEmp" required="required" value="<%= lista.get(15) %>" readonly="readonly"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -78,12 +78,32 @@
                                         Lugar&nbsp;de&nbsp;origen
                                     </td>
                                     <td>
-                                        <input class="form-check-input" type="radio" name="empleadoModOrigen" id="origenModMexico" checked="checked" value="mexico"/>
-                                        <label for="origenMexico">M&eacute;xico</label>
+                                        <%
+                                            if(lista.get(3).toString().equals("Mexicana")){
+                                                %>
+                                                <input class="form-check-input" type="radio" name="empleadoOrigen" id="origenModMexico" checked="checked" value="mexico"/>
+                                                <%
+                                            }else{
+                                                %>
+                                                <input class="form-check-input" type="radio" name="empleadoOrigen" id="origenModMexico" value="mexico"/>
+                                                <%
+                                            }
+                                        %>
+                                        <label for="origenModMexico">M&eacute;xico</label>
                                     </td>
                                     <td>
-                                        <input class="form-check-input" type="radio" name="empleadoModOrigen" id="origenModExtranjero" value="extranjero"/>
-                                        <label for="origenExtranjero">Extranjero</label>
+                                        <%
+                                            if(!lista.get(3).toString().equals("Mexicana")){
+                                                %>
+                                                <input class="form-check-input" type="radio" name="empleadoOrigen" id="origenModExtranjero" checked="checked" value="extranjero"/>
+                                                <%
+                                            }else{
+                                                %>
+                                                <input class="form-check-input" type="radio" name="empleadoOrigen" id="origenModExtranjero" value="extranjero"/>
+                                                <%
+                                            }
+                                        %>
+                                        <label for="origenModExtranjero">Extranjero</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -91,13 +111,13 @@
                                         CURP
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="curpModificarEmp" required="required" value="<% lista.get(4); %>"/>
+                                        <input type="text" class="form-control form-control-sm" id="curpModificarEmp" name="curpModificarEmp" required="required" value="<%= lista.get(4) %>" onblur="datosCurpM();">
                                     </td>
                                     <td>
                                         RFC
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="rfcModificarEmp" required="required" value="<% lista.get(5); %>"/>
+                                        <input type="text" class="form-control form-control-sm" id="rfcModificarEmp" name="rfcModificarEmp" required="required" value="<%= lista.get(5) %>"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -105,20 +125,70 @@
                                         Nombre
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nombreModificarEmp" required="required" value="<% lista.get(0); %>"/>
+                                        <input type="text" class="form-control form-control-sm" id="nombreModificarEmp" name="nombreModificarEmp" required="required" value="<%= lista.get(0) %>"/>
                                     </td>
                                     <td>
                                         &Aacute;rea
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="areaModificarEmp" required="required" value="<% lista.get(10); %>">
-                                            <option selected="selected" value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
-                                            <option value="1">Recursos&nbsp;Humanos</option>
-                                            <option value="2">Ventas</option>
-                                            <option value="3">Compras</option>
-                                            <option value="4">Invetario</option>
-                                            <option value="5">Gerencia</option>
-                                            <option value="6">Contabilidad</option>
+                                        <select class="custom-select custom-select-sm" id="areaModificarEmp" name="areaModificarEmp" required="required">
+                                            <option value="">Selecciona&nbsp;un&nbsp;&aacute;rea...</option>
+                                            <%
+                                                if(lista.get(10).toString().equals("1")){
+                                                    %>
+                                                    <option selected="selected" value="1">Gerencia</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="1">Gerencia</option>
+                                                    <%
+                                                }
+                                                if(lista.get(10).toString().equals("2")){
+                                                    %>
+                                                    <option selected="selected" value="2">Recursos&nbsp;Humanos</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="2">Recursos&nbsp;Humanos</option>
+                                                    <%
+                                                }
+                                                if(lista.get(10).toString().equals("3")){
+                                                    %>
+                                                    <option selected="selected" value="3">Contabilidad</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="3">Contabilidad</option>
+                                                    <%
+                                                }
+                                                if(lista.get(10).toString().equals("4")){
+                                                    %>
+                                                    <option selected="selected" value="4">Ventas</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="4">Ventas</option>
+                                                    <%
+                                                }
+                                                if(lista.get(10).toString().equals("5")){
+                                                    %>
+                                                    <option selected="selected" value="5">Compras</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="5">Compras</option>
+                                                    <%
+                                                }
+                                                if(lista.get(10).toString().equals("6")){
+                                                    %>
+                                                    <option selected="selected" value="6">Inventario</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="6">Inventario</option>
+                                                    <%
+                                                }
+                                            %>
                                         </select>
                                     </td>
                                 </tr>
@@ -127,17 +197,43 @@
                                         Primer&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="paternoModificarEmp" required="required" value="<% lista.get(1); %>"/>
+                                        <input type="text" class="form-control form-control-sm" id="paternoModificarEmp" name="paternoModificarEmp" required="required" value="<%= lista.get(1) %>"/>
                                     </td>
                                     <td>
                                         Puesto
                                     </td>
                                     <td>
-                                        <select class="custom-select custom-select-sm" id="puestoModificarEmp" required="required" value="<% lista.get(11); %>">
-                                            <option selected="selected" value="">Selecciona&nbsp;un&nbsp;puesto...</option>
-                                            <option value="1">Administrador</option>
-                                            <option value="2">Empleado&nbsp;de&nbsp;planta</option>
-                                            <option value="3">Asistente</option>
+                                        <select class="custom-select custom-select-sm" id="puestoModificarEmp" name="puestoModificarEmp" required="required">
+                                            <option value="">Selecciona&nbsp;un&nbsp;puesto...</option>
+                                            <%
+                                                if(lista.get(11).toString().equals("1")){
+                                                    %>
+                                                    <option selected="selected" value="1">Administrador</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="1">Administrador</option>
+                                                    <%
+                                                }
+                                                if(lista.get(11).toString().equals("2")){
+                                                    %>
+                                                    <option selected="selected" value="2">Empleado&nbsp;de&nbsp;planta</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="2">Empleado&nbsp;de&nbsp;planta</option>
+                                                    <%
+                                                }
+                                                if(lista.get(11).toString().equals("3")){
+                                                    %>
+                                                    <option selected="selected" value="3">Asistente</option>
+                                                    <%
+                                                }else{
+                                                    %>
+                                                    <option value="3">Asistente</option>
+                                                    <%
+                                                }
+                                            %>
                                         </select>
                                     </td>
                                 </tr>
@@ -146,13 +242,13 @@
                                         Segundo&nbsp;apellido
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="maternoModificarEmp" required="required" value="<% lista.get(2); %>"/>
+                                        <input type="text" class="form-control form-control-sm" id="maternoModificarEmp" name="maternoModificarEmp" required="required" value="<%= lista.get(2) %>"/>
                                     </td>
                                     <td>
                                         Tel&eacute;fono
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="telModificarEmp" required="required" value="<% lista.get(9); %>"/>
+                                        <input type="number" class="form-control form-control-sm" id="telModificarEmp" name="telModificarEmp" required="required" value="<%= lista.get(9) %>"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -160,13 +256,13 @@
                                         Edad
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="edadModificarEmp" disabled="disabled" min="18" max="80" value="<% lista.get(6); %>" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="edadModificarEmp" name="edadModificarEmp" min="18" max="80" value="<%= lista.get(6) %>" required="required"/>
                                     </td>
                                     <td>
                                         Horario
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="horarioModificarEmp" value="<% lista.get(12); %>" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="horarioModificarEmp" name="horarioModificarEmp" value="<%= lista.get(12) %>" required="required" readonly="readonly"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -174,7 +270,7 @@
                                         Lugar&nbsp;de&nbsp;nacimiento
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="lugarModificarEmp" value="<% lista.get(7); %>" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="lugarModificarEmp" name="lugarModificarEmp" value="<%= lista.get(7) %>" required="required" readonly="readonly"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -182,13 +278,13 @@
                                         Direcci&oacute;n
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="dirModificarEmp" value="<% lista.get(8); %>" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="dirModificarEmp" name="dirModificarEmp" value="<%= lista.get(8) %>" required="required"/>
                                     </td>
                                     <td>
                                         Sueldo
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="sueldoModificarEmp" value="<% lista.get(14); %>" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="sueldoModificarEmp" name="sueldoModificarEmp" value="<%= lista.get(13) %>" required="required" readonly="readonly"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -196,13 +292,13 @@
                                         Nacionalidad
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control form-control-sm" id="nacModificarEmp" value="<% lista.get(3); %>" disabled="disabled" required="required"/>
+                                        <input type="text" class="form-control form-control-sm" id="nacModificarEmp" name="nacModificarEmp" value="<%= lista.get(3) %>" required="required" readonly="readonly"/>
                                     </td>
                                     <td>
                                         Cuenta&nbsp;bancaria
                                     </td>
                                     <td>
-                                        <input type="number" class="form-control form-control-sm" id="cuentaModificarEmp" value="<% lista.get(15); %>" maxlength="16" required="required"/>
+                                        <input type="number" class="form-control form-control-sm" id="cuentaModificarEmp" name="cuentaModificarEmp" value="<%= lista.get(14) %>" maxlength="16" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

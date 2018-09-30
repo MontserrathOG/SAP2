@@ -40,7 +40,7 @@ public class BuscarNomina extends HttpServlet {
             lista = c.consulta("id,empleado,cantidad,estado,origen_recurso,regimen,periodicidad,tipo,percepcion,situacion",
                     "nomina", "id is not null", 10);
         }
-        request.setAttribute("nomina", lista);
+        request.getSession().setAttribute("nomina", lista);
         response.sendRedirect("RecursosHumanos/BuscarResultado.jsp");
     }
 

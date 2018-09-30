@@ -17,7 +17,7 @@
         <script src="Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         
     </head>
-    <body>
+    <body onload="regreso();">
         
         <div class="rounded" id="login">
             

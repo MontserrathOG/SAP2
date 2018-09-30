@@ -17,7 +17,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>Eliminar&nbsp;N&oacute;mina</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">
@@ -59,14 +59,14 @@
             <div class="row"><!-- INICIO DE SECCION PRINCIPAL -->
                 <div class="container-fluid">
                     <center>
-                        <form method="POST" action="EliminarNomina" autocomplete="off">
+                        <form method="POST" action="../EliminarNomina" autocomplete="off">
                             <table>
                                 <tr>
                                     <td>
                                         N&uacute;mero&nbsp;de&nbsp;n&oacute;mina
                                     </td>
                                     <td>
-                                        <input type="number" id="eliminarIdNomina" class="form-control form-control-sm" required="required"/>
+                                        <input type="number" id="eliminarIdNomina" name="eliminarIdNomina" class="form-control form-control-sm" required="required"/>
                                     </td>
                                 </tr>
                                 <tr>

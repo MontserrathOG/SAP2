@@ -7,7 +7,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    ArrayList lista = (ArrayList) request.getAttribute("empleados");
+    ArrayList lista = (ArrayList) request.getSession().getAttribute("empleados");
 %>
 <!DOCTYPE html>
 <html>
@@ -21,7 +21,7 @@
         <script src="../JS/RecursosHumanos.js" type="text/javascript"></script>
         <title>Modificar&nbsp;Empleado</title>
     </head>
-    <body>
+    <body onload="regreso();">
         <div class="container-fluid">
             <div class="row"><!-- INICIO DE NAVBAR -->
                 <div class="container-fluid">
@@ -87,13 +87,14 @@
                             <tr>
                                 <%
                                     for(int i = 0 ; i < lista.size() ; i++){
-                                        if(i%19 == 0){
+                                        if(i%18 == 0){
                                             %>
                             </tr>
                             <tr>
                                             <%
-                                        }
-                                        lista.get(i);
+                                        }%>
+                                        <td><%= lista.get(i) %></td>
+                                <%
                                     }
                                 %>
                             </tr>
