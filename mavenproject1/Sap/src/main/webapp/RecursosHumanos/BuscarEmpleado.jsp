@@ -48,7 +48,7 @@
                                         </div>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="#" class="nav-link">Cerrar&nbsp;sesi&oacute;n</a>
+                                        <a href="../index.jsp" class="nav-link">Cerrar&nbsp;sesi&oacute;n</a>
                                     </li>
                                 </ul>
                             </div>
