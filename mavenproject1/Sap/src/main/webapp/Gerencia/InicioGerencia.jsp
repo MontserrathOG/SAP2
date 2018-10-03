@@ -14,6 +14,7 @@ and open the template in the editor.
         <script src="../Recursos/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
         <script src="../Gerencia/validaciones/validacion.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js" integrity="sha256-CfcERD4Ov4+lKbWbYqXD6aFM9M51gN4GUEtDhkWABMo=" crossorigin="anonymous"></script>
     </head>
     <body>
         <header class="sticky-top">
@@ -28,20 +29,20 @@ and open the template in the editor.
                         <a id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle" style="color: white;" >Historia</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item dropdown-submenu">
-                                <form onsubmit="return validalog(fecha,area,horaInicio,horaFin);" action="" name="historial" method="post" autocomplete="off">
+                                <form onsubmit="return validalog(fecha, area, horaInicio, horaFin);" action="" name="historial" method="post" autocomplete="off">
                                     <label>Fecha
                                         <input type="date" name="fecha" id="fecha" max="3000-12-31"  min="1000-01-01" class="form-control">
                                     </label>
                                     <br>
                                     <p>Area</p>
                                     <select name="area" id="area">
-                                            <option value="gerencia">Gerencia</option> 
-                                            <option value="rh">Recursos Humanos</option> 
-                                            <option value="contabilidad">Contabilidad</option>
-                                            <option value="inventarios">Inventarios</option> 
-                                            <option value="compras">Compras</option> 
-                                            <option value="ventas">Ventas</option> 
-                                        </select>
+                                        <option value="gerencia">Gerencia</option> 
+                                        <option value="rh">Recursos Humanos</option> 
+                                        <option value="contabilidad">Contabilidad</option>
+                                        <option value="inventarios">Inventarios</option> 
+                                        <option value="compras">Compras</option> 
+                                        <option value="ventas">Ventas</option> 
+                                    </select>
                                     <br>
                                     <br>
                                     <label>Intervalo&nbsp;de&nbsp;tiempo</label>
@@ -93,33 +94,33 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div style="background-color: #fff; margin: 20px 2px;">
-                            <a  href="#">
-                                <h1 style="color: black; margin-left: 20px;">Inventarios</h1>
-                                <div class="row justify-content-center">
-                                    <br>
-                                    <img src="img/inventario.jpg" class="mx-auto d-block">
-                                </div>
-                            </a>    
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                        <div style="background-color: #fff; margin: 20px 2px;">
                             <a  href="../Contabilidad/Contabilidad.html">
                                 <h1 style="color: black; margin-left: 20px;">Contabilidad</h1>
                                 <div class="row justify-content-center">
-                                    <br>
-                                    <img src="img/rh.jpg" class="mx-auto d-block" >
+                                    <canvas id="gContabilidad" width="400" height="400"></canvas>
+                                    <script type="text/javascript" src="../Gerencia/graficas/graficaContabilidad.js"></script>
                                 </div>
                         </div>
                         </a>     
                     </div>  
+                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                        <div style="background-color: #fff; margin: 20px 2px;">
+                            <a  href="#">
+                                <h1 style="color: black; margin-left: 20px;">Inventarios</h1>
+                                <div class="row justify-content-center">
+                                    <canvas id="gInventarios" width="400" height="400"></canvas>
+                                    <script type="text/javascript" src="../Gerencia/graficas/graficaInventarios.js"></script>
+                                </div>
+                            </a>    
+                        </div>
+                    </div>
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div style="background-color: #fff; margin: 20px 2px;">
                             <a href="../RecursosHumanos/rh_index.jsp">
                                 <h1 style="color: black; margin-left: 20px;">Recursos Humanos</h1>
                                 <div class="row justify-content-center">
-                                    <br>
-                                    <img src="img/rh.jpg" class="mx-auto d-block">
+                                    <canvas id="gRH" width="400" height="400"></canvas>
+                                    <script type="text/javascript" src="../Gerencia/graficas/graficaRH.js"></script>
                                 </div>
                         </div>
                         </a>     
@@ -134,8 +135,8 @@ and open the template in the editor.
                             <a href="#">
                                 <h1 style="color: black; margin-left: 20px;">Compras</h1>
                                 <div class="row justify-content-center">                               
-                                    <br>
-                                    <img src="img/compras.jpg" class="mx-auto d-block">
+                                    <canvas id="gCompras" width="400" height="400"></canvas>
+                                    <script type="text/javascript" src="../Gerencia/graficas/graficaCompras.js"></script>
                                 </div>
                             </a>    
                         </div>     
@@ -145,8 +146,8 @@ and open the template in the editor.
                             <a href="#">
                                 <h1 style="color: black; margin-left: 20px;">Ventas</h1>
                                 <div class="row justify-content-center">                               
-                                    <br>
-                                    <img src="img/ventas.png" class="mx-auto d-block" >
+                                    <canvas id="gVentas" width="400" height="400"></canvas>
+                                    <script type="text/javascript" src="../Gerencia/graficas/graficaVentas.js"></script>   
                                 </div>        
                             </a>     
                         </div>                                                 
