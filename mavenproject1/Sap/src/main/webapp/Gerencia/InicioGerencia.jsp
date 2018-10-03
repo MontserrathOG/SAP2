@@ -28,17 +28,27 @@ and open the template in the editor.
                         <a id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle" style="color: white;" >Historia</a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-item dropdown-submenu">
-                                <p href="#" >Fecha</p>
-                                <form action="../../Consultalog" name="formulario" method="post" autocomplete="off">
-                                    <input type="date" name="bday" id="bday" max="3000-12-31"  min="1000-01-01" class="form-control">
+                                <form onsubmit="return validalog(fecha,area,horaInicio,horaFin);" action="" name="historial" method="post" autocomplete="off">
+                                    <label>Fecha
+                                        <input type="date" name="fecha" id="fecha" max="3000-12-31"  min="1000-01-01" class="form-control">
+                                    </label>
+                                    <br>
+                                    <p>Area</p>
+                                    <select name="area" id="area">
+                                            <option value="gerencia">Gerencia</option> 
+                                            <option value="rh">Recursos Humanos</option> 
+                                            <option value="contabilidad">Contabilidad</option>
+                                            <option value="inventarios">Inventarios</option> 
+                                            <option value="compras">Compras</option> 
+                                            <option value="ventas">Ventas</option> 
+                                        </select>
+                                    <br>
                                     <br>
                                     <label>Intervalo&nbsp;de&nbsp;tiempo</label>
-                                    <br/>
                                     <div id="hora">
+                                        <label>De: <input id="horaInicio" for="example-time-input" type="time" name="horaInicio" max="22:30:00" min="10:00:00" class="form-control"></label>
                                         <br>
-                                        <label>De: <input id="horaInicio" for="example-time-input" type="time" name="horaInicio" class="form-control"></label>
-                                        <br>
-                                        <label>A:   <input id="horaFin" for="example-time-input" type="time" name="horaFin" max="22:30:00" min="10:00:00" step="1" class="form-control"></label>  
+                                        <label>A:   <input id="horaFin" for="example-time-input" type="time" name="horaFin" max="22:30:00" min="10:00:00"  class="form-control"></label>  
                                     </div>
                                     <br>
                                     <input type="submit" class="btn btn-danger text-white" value="Generar">
@@ -51,18 +61,18 @@ and open the template in the editor.
                         <ul class="dropdown-menu">
                             <li class="dropdown-item dropdown-submenu">
                                 <p>Configurar Web Services</p>
-                                <form  onsubmit="return validawebservice('nombre','ip','puerto');" action="" name="formulario" method="post" autocomplete="off">
+                                <form  onsubmit="return validawebservice('nombre', 'ip', 'puerto');" action="" name="ws" method="post" autocomplete="off">
                                     <br>
                                     <label>Nombre&nbsp;del&nbsp;servicio
-                                    <input type="" name="nombre" id="nombre"  class="form-control">
+                                        <input type="" name="nombre" id="nombre"  class="form-control">
                                     </label>
                                     <br>
                                     <label>Ip&nbsp;del&nbsp;servicio
-                                    <input type="" name="ip" id="ip" class="form-control">
+                                        <input type="" name="ip" id="ip" class="form-control">
                                     </label>
                                     <br>
                                     <label>Puerto&nbsp;del&nbsp;servicio
-                                    <input type="" name="puerto" id="puerto"  class="form-control">
+                                        <input type="" name="puerto" id="puerto"  class="form-control">
                                     </label>
                                     <br>
                                     <input type="submit" class="btn btn-danger text-white" value="Guardar">
