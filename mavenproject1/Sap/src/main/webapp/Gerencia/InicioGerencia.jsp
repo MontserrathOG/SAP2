@@ -13,11 +13,12 @@ and open the template in the editor.
         <script src="../Recursos/bootstrap/librerias/jquery-3.3.1.min.js" type="text/javascript"></script>
         <script src="../Recursos/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../Recursos/bootstrap/librerias/popper.min.js" type="text/javascript"></script>
+        <script src="../Gerencia/validaciones/validacion.js" type="text/javascript"></script>
     </head>
     <body>
         <header class="sticky-top">
             <!--barra de navegacion creada con bootstrap-->
-            <nav class="navbar navbar-expand-lg navbar-dark barra" style="background: black;" >
+            <nav class="navbar navbar-expand-lg navbar-dark barra" style="background: #C2C2C2;" >
                 <a class="navbar-brand text-white" href="../Gerencia/InicioGerencia.html"><h1>Informaci&oacute;n Gerencial</h1></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -41,6 +42,30 @@ and open the template in the editor.
                                     </div>
                                     <br>
                                     <input type="submit" class="btn btn-danger text-white" value="Generar">
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown" style="list-style:none;">
+                        <a id="menu" data-toggle="dropdown" class="nav-link dropdown-toggle" style="color: white;" >Configuración</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item dropdown-submenu">
+                                <p>Configurar Web Services</p>
+                                <form  onsubmit="return validawebservice('nombre','ip','puerto');" action="" name="formulario" method="post" autocomplete="off">
+                                    <br>
+                                    <label>Nombre&nbsp;del&nbsp;servicio
+                                    <input type="" name="nombre" id="nombre"  class="form-control">
+                                    </label>
+                                    <br>
+                                    <label>Ip&nbsp;del&nbsp;servicio
+                                    <input type="" name="ip" id="ip" class="form-control">
+                                    </label>
+                                    <br>
+                                    <label>Puerto&nbsp;del&nbsp;servicio
+                                    <input type="" name="puerto" id="puerto"  class="form-control">
+                                    </label>
+                                    <br>
+                                    <input type="submit" class="btn btn-danger text-white" value="Guardar">
                                 </form>
                             </li>
                         </ul>
