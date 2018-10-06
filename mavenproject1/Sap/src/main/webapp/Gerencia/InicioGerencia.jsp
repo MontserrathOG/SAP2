@@ -94,10 +94,10 @@ and open the template in the editor.
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                         <div style="background-color: #fff; margin: 20px 2px;">
-                            <a  href="../Contabilidad/Contabilidad.html">
+                            <a  href="../Contabilidad/Contabilidad.jsp">
                                 <h1 style="color: black; margin-left: 20px;">Contabilidad</h1>
-                                <div class="row justify-content-center">
-                                    <canvas id="gContabilidad" width="400" height="400"></canvas>
+                                <div class="row justify-content-center" style="margin-left: 20px; margin-right: 20px;">
+                                    <canvas id="gContabilidad" width="100%" height="80px"></canvas>
                                     <script type="text/javascript" src="../Gerencia/graficas/graficaContabilidad.js"></script>
                                 </div>
                         </div>
@@ -107,8 +107,8 @@ and open the template in the editor.
                         <div style="background-color: #fff; margin: 20px 2px;">
                             <a  href="#">
                                 <h1 style="color: black; margin-left: 20px;">Inventarios</h1>
-                                <div class="row justify-content-center">
-                                    <canvas id="gInventarios" width="400" height="400"></canvas>
+                                <div class="row justify-content-center" style="margin-left: 20px; margin-right: 20px;">
+                                    <canvas id="gInventarios" width="100%" height="80px"></canvas>
                                     <script type="text/javascript" src="../Gerencia/graficas/graficaInventarios.js"></script>
                                 </div>
                             </a>    
@@ -118,8 +118,8 @@ and open the template in the editor.
                         <div style="background-color: #fff; margin: 20px 2px;">
                             <a href="../RecursosHumanos/rh_index.jsp">
                                 <h1 style="color: black; margin-left: 20px;">Recursos Humanos</h1>
-                                <div class="row justify-content-center">
-                                    <canvas id="gRH" width="400" height="400"></canvas>
+                                <div class="row justify-content-center" style="margin-left: 20px; margin-right: 20px;">
+                                    <canvas id="gRH" width="100%" height="80px"></canvas>
                                     <script type="text/javascript" src="../Gerencia/graficas/graficaRH.js"></script>
                                 </div>
                         </div>
@@ -134,8 +134,8 @@ and open the template in the editor.
                         <div style="background-color: #fff; margin: 20px 2px;">
                             <a href="#">
                                 <h1 style="color: black; margin-left: 20px;">Compras</h1>
-                                <div class="row justify-content-center">                               
-                                    <canvas id="gCompras" width="400" height="400"></canvas>
+                                <div class="row justify-content-center" style="margin-left: 20px; margin-right: 20px;">                               
+                                    <canvas id="gCompras" width="100%"></canvas>
                                     <script type="text/javascript" src="../Gerencia/graficas/graficaCompras.js"></script>
                                 </div>
                             </a>    
@@ -145,8 +145,8 @@ and open the template in the editor.
                         <div style="background-color: #fff; margin: 20px 2px;">
                             <a href="#">
                                 <h1 style="color: black; margin-left: 20px;">Ventas</h1>
-                                <div class="row justify-content-center">                               
-                                    <canvas id="gVentas" width="400" height="400"></canvas>
+                                <div class="row justify-content-center" style="margin-left: 20px; margin-right: 20px;">                               
+                                    <canvas id="gVentas" width="100%"></canvas>
                                     <script type="text/javascript" src="../Gerencia/graficas/graficaVentas.js"></script>   
                                 </div>        
                             </a>     
@@ -163,7 +163,7 @@ and open the template in the editor.
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div style="background-color: #fff; margin: 0px 10px 10px 10px;">
                     <br>
-                    <form action="../../ig_reporte" method="post">
+                        <form action="../GeneraReporte" method="post">
                         <center>
                             <input class="btn btn-danger text-white" style="background-color: #000" type="submit" value="Generar Reporte" />
                         </center>

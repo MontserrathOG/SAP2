@@ -82,4 +82,16 @@ public class Conexion {
         closeDB();
         return rs;
     }
+  
+    public int insercionRegistro(int id, String area, String des) throws SQLException{
+        openDB();
+        int valor=1;
+        PreparedStatement ps;
+        ps=conn.prepareStatement("INSERT INTO log(id,area,des) VALUES ("+id+",'"+area+"','"+des+"');");
+        valor= ps.executeUpdate();
+        closeDB();        
+        return valor;
+    }
+    
+    
 }
